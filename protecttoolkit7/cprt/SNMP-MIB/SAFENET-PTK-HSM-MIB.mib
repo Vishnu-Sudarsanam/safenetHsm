@@ -1,0 +1,146 @@
+SAFENET-PTK-HSM-MIB DEFINITIONS ::= BEGIN
+
+--
+-- Copyright 2013-19 SafeNet, Inc. All rights reserved.
+--
+-- All rights reserved. This file contains information that is
+-- proprietary to SafeNet, Inc. and may not be distributed
+-- or copied without written consent from SafeNet, Inc.
+--
+
+IMPORTS
+    MODULE-IDENTITY, OBJECT-TYPE, enterprises, Unsigned32, Counter32, Counter64  FROM SNMPv2-SMI
+    DisplayString, TruthValue FROM SNMPv2-TC
+    ptk FROM SAFENET-PTK-GLOBAL-MIB;
+
+
+hardwareSecurityModules MODULE-IDENTITY
+    LAST-UPDATED "201904060000Z"
+    ORGANIZATION "www.gemalto.com"
+    CONTACT-INFO    
+          "
+      postal: 20 Colonnade Road, Suite 200
+                    Ottawa, ON
+                    Canada
+                    K2E 7M6
+
+      phone:    1-613-723-5077
+      email:    support@safenet-inc.com
+          "
+    DESCRIPTION
+     "
+           SafeNet MIB definition for Hardware Security Modules on a managed element.
+     "
+    REVISION     "201904060000Z"
+    DESCRIPTION  "First release."
+    ::= { ptk 1 }
+
+
+--
+-- Hardware Security Module Table
+--
+
+hsmSerialNumber OBJECT-TYPE
+    SYNTAX     DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The serial number of the HSM."
+    ::= { hardwareSecurityModules 1 }
+
+
+hsmFirmwareVersion OBJECT-TYPE
+    SYNTAX     DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The version of firmware executing on the HSM."
+    ::= { hardwareSecurityModules 2 }
+
+
+hsmSecurityMode OBJECT-TYPE
+    SYNTAX     DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The current enabled security mode of the HSM."
+    ::= { hardwareSecurityModules 3 }
+
+    
+hsmModel OBJECT-TYPE
+    SYNTAX     DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The model identifier for the HSM."
+    ::= { hardwareSecurityModules 4 }
+
+
+hsmTransportMode OBJECT-TYPE
+    SYNTAX     DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The current enabled transport mode of the HSM."
+    ::= { hardwareSecurityModules 5 }
+
+    
+hsmFMSupport OBJECT-TYPE
+    SYNTAX     DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "FM support"
+    ::= { hardwareSecurityModules 6 }
+
+hsmFMStatus OBJECT-TYPE
+    SYNTAX     DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "Status of the FM feature."
+    ::= { hardwareSecurityModules 7 }
+
+
+hsmOpenSessionCount OBJECT-TYPE
+    SYNTAX     INTEGER
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The number of currently open sessions."
+    ::= { hardwareSecurityModules 8 }
+
+
+hsmNumberOfSlots OBJECT-TYPE
+    SYNTAX     INTEGER
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The number of slots on the HSM."
+    ::= { hardwareSecurityModules 9 }
+
+hsmUsage OBJECT-TYPE
+    SYNTAX     INTEGER
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The percentage of HSM usage."
+    ::= { hardwareSecurityModules 10 }
+
+
+hsmState OBJECT-TYPE
+    SYNTAX     INTEGER {
+        tampered(1),
+        normal(2),
+        unknownState(3)
+    }
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "The current HSM state."
+    ::= { hardwareSecurityModules 11 }
+
+
+   
+END
+

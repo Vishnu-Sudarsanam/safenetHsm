@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jhsm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../lib/linux-x86_64/jhsm.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

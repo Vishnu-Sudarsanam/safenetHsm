@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# This file is provided as part of the SafeNet Protect Toolkit
+#
+# (c) Copyright 2001-2014 SafeNet, Inc. All rights reserved.
+# This file is protected by laws protecting trade secrets and confidential
+# information, as well as copyright laws and international treaties.
+#
+
+PTKPATH=/opt/safenet/protecttoolkit7/ptk
+JAR=$PTKPATH/lib/gctadmin.jar
+OPTIONS=""
+
+ostype=`uname -s`
+case "$ostype" in
+    [lL]inux)
+        LD_LIBRARY_PATH=$PTKPATH/lib:$LD_LIBRARY_PATH
+        export LD_LIBRARY_PATH
+        ;;
+    HP-UX)
+        OPTIONS="-Xint"
+        ;;
+esac
+
+java $OPTIONS -jar $JAR $*

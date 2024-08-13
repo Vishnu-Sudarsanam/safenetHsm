@@ -1,0 +1,89 @@
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/usr/share/locale/en_IN/LC_MESSAGES/gcc-11.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/gcc-11.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en_IN/LC_MESSAGES/gcc-11.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/gcc-11.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+access("/home/vishnu/.nvm/versions/node/v18.13.0/bin/cc", X_OK) = -1 ENOENT (No such file or directory)
+access("/opt/gradle/gradle-7.4.2/bin/cc", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/sbin/cc", X_OK)      = -1 ENOENT (No such file or directory)
+access("/usr/local/bin/cc", X_OK)       = -1 ENOENT (No such file or directory)
+access("/usr/sbin/cc", X_OK)            = -1 ENOENT (No such file or directory)
+access("/usr/bin/cc", X_OK)             = 0
+readlink("/usr", 0x7ffdf34b3270, 1023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/bin", 0x7ffdf34b3270, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/bin/cc", "/etc/alternatives/cc", 1023) = 20
+readlink("/etc", 0x7ffdf34b3270, 1023)  = -1 EINVAL (Invalid argument)
+readlink("/etc/alternatives", 0x7ffdf34b3270, 1023) = -1 EINVAL (Invalid argument)
+readlink("/etc/alternatives/cc", "/usr/bin/gcc", 1023) = 12
+readlink("/usr", 0x7ffdf34b3270, 1023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/bin", 0x7ffdf34b3270, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/bin/gcc", "gcc-11", 1023) = 6
+readlink("/usr/bin/gcc-11", "x86_64-linux-gnu-gcc-11", 1023) = 23
+readlink("/usr/bin/x86_64-linux-gnu-gcc-11", 0x7ffdf34b3270, 1023) = -1 EINVAL (Invalid argument)
+access("/home/vishnu/.nvm/versions/node/v18.13.0/bin/cc", X_OK) = -1 ENOENT (No such file or directory)
+access("/opt/gradle/gradle-7.4.2/bin/cc", X_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/sbin/cc", X_OK)      = -1 ENOENT (No such file or directory)
+access("/usr/local/bin/cc", X_OK)       = -1 ENOENT (No such file or directory)
+access("/usr/sbin/cc", X_OK)            = -1 ENOENT (No such file or directory)
+access("/usr/bin/cc", X_OK)             = 0
+readlink("/usr", 0x7ffdf34b3270, 1023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/bin", 0x7ffdf34b3270, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/bin/cc", "/etc/alternatives/cc", 1023) = 20
+readlink("/etc", 0x7ffdf34b3270, 1023)  = -1 EINVAL (Invalid argument)
+readlink("/etc/alternatives", 0x7ffdf34b3270, 1023) = -1 EINVAL (Invalid argument)
+readlink("/etc/alternatives/cc", "/usr/bin/gcc", 1023) = 12
+readlink("/usr", 0x7ffdf34b3270, 1023)  = -1 EINVAL (Invalid argument)
+readlink("/usr/bin", 0x7ffdf34b3270, 1023) = -1 EINVAL (Invalid argument)
+readlink("/usr/bin/gcc", "gcc-11", 1023) = 6
+readlink("/usr/bin/gcc-11", "x86_64-linux-gnu-gcc-11", 1023) = 23
+readlink("/usr/bin/x86_64-linux-gnu-gcc-11", 0x7ffdf34b3270, 1023) = -1 EINVAL (Invalid argument)
+readlink("/opt/safenet/protecttoolkit7/fmsdk/samples/restrict/host/obj-linux-x86_64", 0x7ffdf34b3450, 1023) = -1 EINVAL (Invalid argument)
+readlink("/opt/safenet/protecttoolkit7/fmsdk/samples/restrict/host/obj-linux-x86_64/restricttest.o", 0x7ffdf34b3450, 1023) = -1 EINVAL (Invalid argument)
+readlink("/opt/safenet/protecttoolkit7/fmsdk/samples/restrict/host/obj-linux-x86_64", 0x7ffdf34b3450, 1023) = -1 EINVAL (Invalid argument)
+readlink("/opt/safenet/protecttoolkit7/fmsdk/samples/restrict/host/obj-linux-x86_64/restricttest", 0x7ffdf34b3450, 1023) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/", X_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/", X_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/11/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/specs", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/", X_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper", X_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/collect2", X_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so", R_OK) = 0
+access("/tmp", R_OK|W_OK|X_OK)          = 0
+openat(AT_FDCWD, "/tmp/ccxJtCji.res", O_RDWR|O_CREAT|O_EXCL, 0600) = 3
+access("/usr/lib/gcc/x86_64-linux-gnu/11/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/11/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/../lib/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/11/Scrt1.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o", R_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/11/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/../lib/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/11/crti.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o", R_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o", R_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o", R_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/11/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/lib/../lib/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/11/crtn.o", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o", R_OK) = 0
+access("/usr/lib/gcc/x86_64-linux-gnu/11/collect2", X_OK) = 0
+/usr/bin/ld: warning: libethsm.so, needed by /opt/safenet/protecttoolkit7/cprt/lib/linux-x86_64/libcryptoki.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: /opt/safenet/protecttoolkit7/cprt/lib/linux-x86_64/libcryptoki.so: undefined reference to `MD_Initialize'
+/usr/bin/ld: /opt/safenet/protecttoolkit7/cprt/lib/linux-x86_64/libcryptoki.so: undefined reference to `MD_Finalize'
+/usr/bin/ld: /opt/safenet/protecttoolkit7/cprt/lib/linux-x86_64/libcryptoki.so: undefined reference to `MD_GetParameter'
+/usr/bin/ld: /opt/safenet/protecttoolkit7/cprt/lib/linux-x86_64/libcryptoki.so: undefined reference to `MD_SendReceive'
+/usr/bin/ld: /opt/safenet/protecttoolkit7/cprt/lib/linux-x86_64/libcryptoki.so: undefined reference to `MD_GetHsmCount'
+collect2: error: ld returned 1 exit status
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=17317, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
++++ exited with 1 +++

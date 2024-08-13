@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="obj-ppcfm">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/restrict/fm/obj-ppcfm.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

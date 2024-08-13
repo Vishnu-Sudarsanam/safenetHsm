@@ -1,0 +1,73 @@
+SAFENET-PTK-APPLIANCE-MIB DEFINITIONS ::= BEGIN
+
+--
+-- Copyright 2013-19 Gemalto, Inc. All rights reserved.
+--
+-- All rights reserved. This file contains information that is
+-- proprietary to SafeNet, Inc. and may not be distributed
+-- or copied without written consent from SafeNet, Inc.
+--
+
+IMPORTS
+    MODULE-IDENTITY, NOTIFICATION-TYPE, OBJECT-TYPE, enterprises, 
+       Counter64, Unsigned32, Gauge32  FROM SNMPv2-SMI
+    DisplayString, TruthValue FROM SNMPv2-TC
+    ptk FROM SAFENET-PTK-GLOBAL-MIB;
+
+
+
+appliance MODULE-IDENTITY
+    LAST-UPDATED "201904060000Z"
+    ORGANIZATION "www.gemalto.com"
+    CONTACT-INFO    
+     "postal: 20 Colonnade Road, Suite 200
+                    Ottawa, ON
+                    Canada
+                    K2E 7M6
+
+      phone:    1-613-723-5077
+      email:    support@safenet-inc.com"
+    DESCRIPTION
+     "
+           SafeNet MIB definition for Protect Server.
+
+     "
+    REVISION     "201904060000Z"
+    DESCRIPTION  "First release"
+    ::= { ptk 2 }
+
+appSoftwareVersion OBJECT-TYPE
+   SYNTAX      DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "Appliance Software version number."
+    ::= { appliance 1 }
+
+cprovVersion OBJECT-TYPE
+   SYNTAX      DisplayString
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "PTK Cprov version number."
+    ::= { appliance 2 }
+
+etnetserverRunning OBJECT-TYPE
+   SYNTAX      TruthValue
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "Status of etnetserver service."
+    ::= { appliance 3 }
+
+audittraceRunning OBJECT-TYPE
+   SYNTAX      TruthValue
+    MAX-ACCESS read-only
+    STATUS     current
+    DESCRIPTION
+        "Status of audittrace service."
+    ::= { appliance 4 }
+	
+ssTraps		OBJECT IDENTIFIER ::= { appliance 50 }
+	
+END

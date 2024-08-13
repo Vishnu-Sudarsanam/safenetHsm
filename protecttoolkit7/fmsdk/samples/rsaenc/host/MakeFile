@@ -1,0 +1,85 @@
+#############################################################################
+#
+#  This file is provided as part of the SafeNet Protect Toolkit FM SDK.
+#
+#  (c) Copyright 2000-2014 SafeNet, Inc. All rights reserved.
+#  This file is protected by laws protecting trade secrets and confidential
+#  information, as well as copyright laws and international treaties.
+#
+#
+#############################################################################
+
+all: build
+
+# Detect the platform (Linux or Windows)
+UNAME_S := $(shell uname -s)
+
+ifeq ($(UNAME_S),Linux)
+    PLATFORM := linux
+    CC :=x86_64-w64-mingw32-gcc
+    LN := gcc
+    EXE := 
+    OBJ_EXT := .o
+    LIB_EXT := .so
+    LFLAGS += -L/opt/safenet/protecttoolkit7/cprt/lib/linux-x86_64
+else
+    PLATFORM := windows
+    CC := x86_64-w64-mingw32-gcc
+    LN := x86_64-w64-mingw32-gcc
+    EXE := .exe
+    OBJ_EXT := .o
+    LIB_EXT := .dll
+    LFLAGS += -L/opt/safenet/protecttoolkit7/cprt/lib/win-x86_64
+endif
+
+# Build a console application
+CONSOLE:=1
+
+# Name of the application
+NAME:=rsaenctest
+
+# Name of the FM
+FM_NAME:=rsaenc
+
+# Directory where the FM is built from
+FM_PATH:=../fm
+FMDIR:=/opt/safenet/protecttoolkit7/fmsdk
+include $(FMDIR)/cfgbuild.mak
+
+CFLAGS+=-I../include
+
+# if we are doing emulation build, copy test program to where the FM DLL is.
+ifneq ($(EMUL),$(NULL))
+FM_PATH:=..$(PS)fm
+INSTALL_EXE=$(FM_PATH)$(PS)$(ARCH_EXE)
+endif
+
+build: $(ARCH_EXE)$(EXE) $(INSTALL_EXE)
+
+OBJS:=\
+	rsaenctest$(OBJ_EXT) \
+	stub_rsaenc$(OBJ_EXT)
+
+LIBS:=\
+	-lcryptoki \
+	-lethsm
+
+ifneq ($(EMUL), $(NULL))
+	LFLAGS += -L$(FM_PATH)$(PS)$(OBJDIR)
+endif
+
+# Build the test program
+$(ARCH_EXE)$(EXE): $(OBJDIR) $(ARCH_OBJS)
+	$(LN) -o $(OUT)$(ARCH_EXE)$(EXE) $(LFLAGS) $(ARCH_OBJS) $(ARCH_LIBS)
+
+# Install the test program to another location (if specified)
+$(INSTALL_EXE): $(ARCH_EXE)$(EXE)
+	$(CP) $^ $@
+
+clean :
+	-$(RM) $(ARCH_CLEAN)
+ifneq ($(INSTALL_EXE),$(NULL))
+	-$(RM) $(INSTALL_EXE)
+endif
+	-$(RMDIR) $(subst /,$(PS),$(OBJDIR))
+

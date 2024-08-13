@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jcprov">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../ptk/lib/jcprov.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../ptk/lib/gctadmin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../ptk/lib/jprovdemo.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../ptk/lib/kmu.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
